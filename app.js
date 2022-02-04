@@ -1,7 +1,7 @@
-//Ejercicio Promesas
+//Ejercicio Promesies .catch
 
 const contratarJugador = new Promise( (resolve, reject) => {
-    const contratado = true;
+    const contratado = false;
     if(contratado) {
         resolve('El jugador se incorpora al equipo')
     } else {
@@ -10,12 +10,8 @@ const contratarJugador = new Promise( (resolve, reject) => {
   
 })
 
-function mostrarMsj(msj) {
-    console.log('Mensaje: ', msj);
-}
-
 
 contratarJugador
-        .then(mensaje => mostrarMsj(mensaje))
+        .then(mensaje => console.log(mensaje))
         .catch(err => console.log(err))
 
